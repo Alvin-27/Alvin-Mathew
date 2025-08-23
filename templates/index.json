@@ -282,6 +282,20 @@
     },
     "banner_XkmCJg": {
       "type": "banner",
+      "blocks": {
+        "text_block_VB86FX": {
+          "type": "text_block",
+          "settings": {
+            "heading": "Tisson vison",
+            "text": "Find the ideal gift for your loved ones.",
+            "button_text": "Shop Now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_VB86FX"
+      ],
       "name": "banner",
       "settings": {}
     }
