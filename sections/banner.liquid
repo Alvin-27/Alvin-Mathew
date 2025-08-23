@@ -1,11 +1,15 @@
-<h1>Tisso Vison </h1>
+<h1>{{ section.settings.header_text }}</h1>
 Find the ideal gift for your loved ones.
 {% schema %}
 {
 "name" : "banner",
-"tag": "header",
-"class": "text",
-"settings" : [],
+"settings" : [
+    {
+        "type": "text",
+        "id": "header_text",
+        "label": "Text"
+    }
+],
 "presets" : [
     {
         "name" : "banner"
