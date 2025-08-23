@@ -4,6 +4,7 @@
     <div class="block-item">
       <h2>{{ block.settings.heading }}</h2>
       <p>{{ block.settings.text }}</p>
+      {{ block.settings.button_text }}
     </div>
   {% endfor %}
 </div>
@@ -28,6 +29,12 @@
           "id": "text",
           "label": "Text",
           "default": "Find the ideal gift for your loved ones."
+        },
+        {
+        "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
         }
       ]
     }
