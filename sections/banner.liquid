@@ -1,13 +1,13 @@
 
-<div class="banner">
-  {% for block in section.blocks %}
-    <div class="block-item">
-      <h2>{{ block.settings.heading }}</h2>
-      <p>{{ block.settings.text }}</p>
-      {{ block.settings.button_text }}
-    </div>
-  {% endfor %}
-</div>
+<div class="custom-banner">
+  <h2>{{ section.settings.heading }}</h2>
+  <p>{{ section.settings.text }}</p>
+
+  {% if section.settings.button_link != blank and section.settings.button_text != blank %}
+    <a href="{{ section.settings.button_link }}" class="btn-animated">
+      {{ section.settings.button_text }}
+    </a>
+  {% endif %}
 
 {% schema %}
 {
@@ -35,7 +35,12 @@
       "id": "button_text",
       "label": "Button Text",
       "default": "Shop Now"
-        }
+        },
+         {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
       ]
     }
   ],
