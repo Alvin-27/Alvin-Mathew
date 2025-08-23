@@ -1,4 +1,13 @@
 
+<div class="banner">
+  {% for block in section.blocks %}
+    <div class="block-item">
+      <h2>{{ block.settings.heading }}</h2>
+      <p>{{ block.settings.text }}</p>
+    </div>
+  {% endfor %}
+</div>
+
 {% schema %}
 {
   "name": "banner",
