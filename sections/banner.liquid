@@ -1,5 +1,4 @@
-<h1>{{ section.settings.header_text }}</h1>
-Find the ideal gift for your loved ones.
+
 {% schema %}
 {
 "name" : "banner",
@@ -8,6 +7,21 @@ Find the ideal gift for your loved ones.
         "type": "text",
         "id": "header_text",
         "label": "Text"
+    }
+],
+"blocks": [
+    {
+        "type": "heading",
+      "name": "Heading",
+      "settings": [
+        {
+              "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Hello, world!"
+        }
+      ]
+
     }
 ],
 "presets" : [
