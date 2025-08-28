@@ -1,34 +1,54 @@
-{% for blocks in section %}
-  {% if blocks.id== 'Heading' %}
-    {{ blocks.settings.Heading }}
-  {% endif %}
-  
-{% endfor %}
 {% schema %}
 {
-  "name" : "Banner",
+  "name": "Banner",
   "settings": [
-  ],
-  "presets" : [
     {
-      "name" : "default banner settings"
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading"
     }
   ],
   "blocks": [
     {
       "type": "text_block",
-      "name" : "Header",
+      "name": "Text Block",
       "settings": [
         {
           "type": "text",
-          "id": "Heading",
-          "label" : "Heading",
-          "default" : "Tisso Vision"
+          "id": "text",
+          "label": "Text Content"
         }
       ]
-  
-
+    },
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Upload Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Section"
     }
   ]
 }
 {% endschema %}
+
+<div class="banner">
+  <h2>{{ section.settings.main_heading }}</h2>
+  
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'text_block' %}
+        <div class="text-block">
+          <p>{{ block.settings.text }}</p>
+        </div>
+    {% endcase %}
+  {% endfor %}
+</div>
