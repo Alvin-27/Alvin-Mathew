@@ -2,22 +2,11 @@
   {% for block in section.blocks %}
     <h2>{{ block.settings.heading }}</h2>
     <p> {{ block.settings.sub_heading }}</p>
+    <p>{{ block.settings.gift_description}}</p>
+    <h1>{{ block.settings.gift_heading }}</h1>
     
   {% endfor %}
   </div>
-
-  <div class="gift_section">
-    {% for block in section.blocks %}
-      {% case block.settings.label %}
-        {% when 'Gift Heading' %}
-          <h1>{{ block.settings.gift_heading }}</h1>
-        {% when 'Gift Description' %}
-          <p>{{ block.settings.gift_description }}</p>
-          
-      {% endcase %}
-      
-    {% endfor %}
-    </div>
 
 
 {% schema %} 
