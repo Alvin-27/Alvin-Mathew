@@ -1,5 +1,9 @@
-
-
+{% for blocks in section %}
+  {% if blocks.id== 'Heading' %}
+    {{ blocks.settings.Heading }}
+  {% endif %}
+  
+{% endfor %}
 {% schema %}
 {
   "name" : "Banner",
