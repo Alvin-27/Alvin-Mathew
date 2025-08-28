@@ -8,7 +8,7 @@
 
   <div class="gift_section">
     {% for block in section.blocks %}
-      {% case block.section.label %}
+      {% case block.settings.label %}
         {% when 'Gift Heading' %}
           <h1>{{ block.settings.gift_heading }}</h1>
         {% when 'Gift Description' %}
