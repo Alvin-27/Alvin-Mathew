@@ -6,6 +6,19 @@
   {% endfor %}
   </div>
 
+  <div class="gift_section">
+    {% for block in section.blocks %}
+      {% case block.section.label %}
+        {% when 'Gift Heading' %}
+          <h1>{{ block.settings.gift_heading }}</h1>
+        {% when 'Gift Description' %}
+          <p>{{ block.settings.gift_description }}</p>
+          
+      {% endcase %}
+      
+    {% endfor %}
+    </div>
+
 
 {% schema %} 
  {
