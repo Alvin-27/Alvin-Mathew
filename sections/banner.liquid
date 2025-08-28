@@ -1,19 +1,29 @@
-<h1>{{ section.settings.Text }} </h1>
+
 
 {% schema %}
 {
   "name" : "Banner",
   "settings": [
-    {
-      "type" : "text",
-      "id": "Text",
-      "label": "Heading",
-      "default" : "Hello World"
-    }
   ],
   "presets" : [
     {
       "name" : "default banner settings"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name" : "Header",
+      "settings": [
+        {
+          "type": "text",
+          "id": "Heading",
+          "label" : "Heading",
+          "default" : "Tisso Vision"
+        }
+      ]
+  
+
     }
   ]
 }
