@@ -10,9 +10,7 @@
 {% schema %} 
  {
   "name" : "Banner",
-  "settings" : [
-  
-  ],
+  "settings" : [],
   "blocks" :[
     {
       "name" : "Header",
@@ -31,8 +29,28 @@
         "default" : "Find the ideal gift for your loved ones."
       }
      ]
+    },
+    {
+      "name" : "Gift_Guide",
+      "type": "paragraph",
+      "settings": [
+        {
+          "type": "textarea",
+        "id": "gift_heading",
+        "label": "Gift Heading",
+        "default" : "The Gift Guide"
+        },
+        {
+          "type": "textarea",
+        "id": "gift_description",
+        "label": "Gift Description",
+        "default" : "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season."
+        }
+      ]
     }
   ]
+  
+
 
 }
 
